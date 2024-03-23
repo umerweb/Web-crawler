@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+</head>
+<body>
+    <h1>Job Listings</h1>
+    <ul>
+        {% for job in job_listings %}
+            <li>
+                <a href="{{ job['Job-a'] }}">
+                    <div class="job-container">
+                        <strong>{{ job['Job-Title'] }}</strong><br>
+                        Description: {{ job['Description'] }}<br>
+                        Location: {{ job['Job-Location'] }}<br>
+                        Deadline: {{ job['Job-Deadline'] }}<br>
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
